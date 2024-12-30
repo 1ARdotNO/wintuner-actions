@@ -14,10 +14,4 @@ try {
 }
 
 
-try {
     connect-wtwintuner -UseDefaultCredentials
-} catch {
-    # Code to handle the exception
-    Write-Error "Authenitication failed!"
-}
-
