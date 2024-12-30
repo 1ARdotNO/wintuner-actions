@@ -30,7 +30,7 @@ ClientSecret
 TenantId
 
 ##### NOTE! Create an app in your azure tenant for this
-
+![alt text](docs/img/image.png)
 # Actions
 
 Two action will be created, 
