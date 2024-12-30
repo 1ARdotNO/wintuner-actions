@@ -1,0 +1,17 @@
+{
+    "apps": [
+        {
+            "name": "Notepad++.Notepad++",
+            "type": "wintuner",
+            "version": "latest"
+        },
+        {
+            "name": "Microsoft.VisualStudioCode"
+        },
+        
+        {
+            "name": "Microsoft.PowerShell",
+            "requiredfor": "AllUsers"
+        }
+    ]
+}

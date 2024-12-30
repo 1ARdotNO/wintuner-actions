@@ -1,0 +1,28 @@
+name: Run add-apps.ps1 on Push
+
+on: 
+  push:
+    branches:
+      - main
+
+jobs:
+  run-script:
+    runs-on: windows-latest
+
+    steps:
+    - name: Checkout repository
+      uses: actions/checkout@v2
+
+    - name: Set up PowerShell
+      uses: actions/setup-powershell@v1
+
+    - name: Install dependencies
+      run: |
+        Install-Module -Name PowerShellGet -Force -SkipPublisherCheck
+        Install-Module -Name PackageManagement -Force -SkipPublisherCheck
+        Install-PackageProvider -Name NuGet -Force -Scope CurrentUser
+        Install-Module -Name wintuner -Force -Scope CurrentUser
+
+    - name: Run add-apps.ps1
+      run: ./add-apps.ps1
+      shell: pwsh
