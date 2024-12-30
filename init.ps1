@@ -15,7 +15,7 @@ try {
 
 
 try {
-    connect-wtwintuner -ClientId $ClientId -ClientSecret $ClientSecret -TenantId $TenantId
+    connect-wtwintuner -UseManagedIdentity
 } catch {
     # Code to handle the exception
     Write-Error "Authenitication failed!"

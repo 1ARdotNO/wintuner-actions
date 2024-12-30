@@ -1,5 +1,8 @@
 # wintuner-actions
-Automated run of Wintuner for Gtihub actions
+Automated run of Wintuner for Gtihub actions,
+
+> [!CAUTION]
+> Running this for production on public runners might be risky, recommended to run on local runners in a high security context!
 
 # Usage
 
@@ -21,13 +24,13 @@ All available properties are as follows;
 
 ```
 
-
-
 Then populate your github secrets as follows;
 ### Required Github Secrets
-ClientId
-ClientSecret
-TenantId
+- AZURE_CLIENT_ID
+- AZURE_CLIENT_SECRET
+- AZURE_TENANT_ID
+
+###### NOTE Implementation based upon https://github.com/svrooij/WingetIntune/issues/74#issuecomment-2132101528
 
 ##### NOTE! Create an app in your azure tenant for this
 ![alt text](docs/img/image.png)

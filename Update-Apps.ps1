@@ -1,8 +1,5 @@
 param(
     [string]$configPath = "config.json",
-    $ClientId=$ENV:ClientId, 
-    $ClientSecret=$ENV:ClientSecret,
-    $TenantId=$ENV:TenantId,
     $packagepath="C:\Tools\Packages"
 )
 
