@@ -19,5 +19,9 @@ jobs:
         Install-Module -Name wintuner -Force -Scope CurrentUser
 
     - name: Run update-apps.ps1
+      env:
+        AZURE_CLIENT_ID: ${{ secrets.AZURE_CLIENT_ID }}
+        AZURE_CLIENT_SECRET: ${{ secrets.AZURE_CLIENT_SECRET }}
+        AZURE_TENANT_ID: ${{ secrets.AZURE_TENANT_ID }}
       run: ./update-apps.ps1
       shell: pwsh
