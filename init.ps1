@@ -15,7 +15,7 @@ try {
 
 
 try {
-    connect-wtwintuner -UseManagedIdentity
+    connect-wtwintuner -UseDefaultCredentials
 } catch {
     # Code to handle the exception
     Write-Error "Authenitication failed!"
