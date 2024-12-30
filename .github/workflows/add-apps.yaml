@@ -12,12 +12,9 @@ jobs:
     steps:
     - name: Checkout repository
       uses: actions/checkout@v2
-      
+
     - name: Install dependencies
       run: |
-        Install-Module -Name PowerShellGet -Force -SkipPublisherCheck
-        Install-Module -Name PackageManagement -Force -SkipPublisherCheck
-        Install-PackageProvider -Name NuGet -Force -Scope CurrentUser
         Install-Module -Name wintuner -Force -Scope CurrentUser
 
     - name: Run add-apps.ps1
