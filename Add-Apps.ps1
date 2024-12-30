@@ -15,8 +15,8 @@ ForEach-Object {
     if($_.version -eq "latest"){
         $_.version = $null
     }
-    if($_.Availablefor -eq $null){
-        $_ | Add-Member -NotePropertyName Availablefor -NotePropertyValue "Allusers" -Force
+    if(($_.Availablefor -eq $null) -and ($_.RequiredFor -ne "AllUsers")){
+        $_ | Add-Member -NotePropertyName Availablefor -NotePropertyValue "AllUsers" -Force
         #$_.Availablefor = "Allusers"
     }
     if($_.RequiredFor -eq $null){
