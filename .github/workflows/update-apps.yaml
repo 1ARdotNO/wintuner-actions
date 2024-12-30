@@ -1,9 +1,9 @@
 name: Run update-apps.ps1 on Push
 
-on: 
-  push:
-    branches:
-      - main
+on:
+  schedule:
+    - cron: '0 0 * * *'
+
 
 jobs:
   run-script:
@@ -12,9 +12,6 @@ jobs:
     steps:
     - name: Checkout repository
       uses: actions/checkout@v2
-
-    - name: Set up PowerShell
-      uses: actions/setup-powershell@v1
 
     - name: Install dependencies
       run: |
