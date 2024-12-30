@@ -6,6 +6,7 @@ on:
       - main
     paths:
       - 'config.json'
+  workflow_dispatch:
 
 jobs:
   run-script:

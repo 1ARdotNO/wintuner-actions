@@ -3,6 +3,7 @@ name: Run update-apps.ps1 on Push
 on:
   schedule:
     - cron: '0 0 * * *'
+  workflow_dispatch:
 
 
 jobs:
@@ -15,9 +16,6 @@ jobs:
 
     - name: Install dependencies
       run: |
-        Install-Module -Name PowerShellGet -Force -SkipPublisherCheck
-        Install-Module -Name PackageManagement -Force -SkipPublisherCheck
-        Install-PackageProvider -Name NuGet -Force -Scope CurrentUser
         Install-Module -Name wintuner -Force -Scope CurrentUser
 
     - name: Run update-apps.ps1
